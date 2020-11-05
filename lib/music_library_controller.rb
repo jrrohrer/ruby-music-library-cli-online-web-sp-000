@@ -8,7 +8,10 @@ class MusicLibraryController
 
   def call
     input = ""
+<<<<<<< HEAD
 
+=======
+>>>>>>> 293c21dc72ce163b504d73c04fa72ae0f0bef9e1
     while input != 'exit'
       puts "Welcome to your music library!"
       puts "To list all of your songs, enter 'list songs'."
@@ -19,6 +22,7 @@ class MusicLibraryController
       puts "To play a song, enter 'play song'."
       puts "To quit, type 'exit'."
       puts "What would you like to do?"
+<<<<<<< HEAD
     input = gets.strip
 
 
@@ -37,6 +41,25 @@ class MusicLibraryController
         play_song
     end
   end
+=======
+      input = gets.strip
+    end
+
+    case input
+    when "list songs"
+      list_songs
+    when "list artists"
+      list_artists
+    when "list genres"
+      list_genres
+    when "list artist"
+      list_songs_by_artist
+    when "list genre"
+      list_songs_by_genre
+    when "play song"
+      play_song
+    end
+>>>>>>> 293c21dc72ce163b504d73c04fa72ae0f0bef9e1
 
     def list_songs
       Song.all.sort{|a, b| a.name <=> b.name}.each_with_index do |song, index|
